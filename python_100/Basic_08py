@@ -1,0 +1,49 @@
+# DICT 
+# star expression -> * 
+scores = [8.8, 8.9, 8.7, 9.2, 9.3, 9.7, 9.9, 9.5, 7.8, 9.4]
+
+a,b, *c = tuple(scores)
+print(*c)
+
+temp = {}
+print(temp, type(temp))
+menu = {'메로나': 1000, '폴라포':1200, '빵빠레':1800}
+print(menu)
+menu.update({'죠스바': 1200, '월드콘': 1500})
+#result 
+# ice['조스바]: 1200 
+# ice['월드콘']:1500
+
+print(menu)
+
+print("메로나: ", menu['메로나'])
+
+menu['메로나'] = 1300
+print(menu)
+
+del menu['메로나']
+print(menu)
+
+# dict indexing
+
+ice = {"메로나": [300, 20], "비비빅": [400, 3], "죠스바": [250, 100]}
+
+print(ice["메로나"][0])
+print(ice["메로나"][1])
+
+ice.update({'월드콘':[500,7]})
+# result 
+# ice['월드콘'] = [500,7]
+print(ice)
+
+# dict keys(), values() method
+icec = {'탱크보이': 1200, '폴라포': 1200, '빵빠레': 1800, '월드콘': 1500, '메로나': 1000}
+print(list(icec.keys()))
+print(list(icec.values()))
+
+ # zip 
+keys = ("apple", "pear", "peach")
+vals = (300, 250, 400)
+
+result = dict(zip(keys, vals))
+print(result)
